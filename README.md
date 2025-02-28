@@ -16,8 +16,7 @@ Configuração do projeto
 
 Clone este repositório:
 
-git clone https://github.com/seu-usuario/blogdoagi-cypress-tests.git
-cd blogdoagi-cypress-tests
+git clone https://github.com/alexfabianopereira/blogdoagi.git
 
 Instale as dependências do Cypress:
 
