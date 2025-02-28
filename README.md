@@ -1,22 +1,56 @@
-# blogdoagi
+#Testes Automatizados com Cypress - Blog do Agi
 
+Este repositório contém a automação de testes para a funcionalidade de pesquisa do Blog do Agi (https://blogdoagi.com.br/) utilizando o framework Cypress.
 
-Cenário 1: Pesquisa com resultados
-Dado que eu estou na página de pesquisa do blog do Agi
-Quando eu digito uma palavra-chave na caixa de pesquisa e clico na lupa
-Então o sistema exibe uma lista de artigos relacionados à palavra-chave pesquisada.
+📌 Pré-requisitos
 
-Cenário 2: Pesquisa sem resultados
-Dado que eu estou na página de pesquisa do blog do Agi
-Quando eu digito uma palavra-chave na caixa de pesquisa e clico na lupa
-Então o sistema informa que não foram encontrados artigos relacionados à palavra-chave pesquisada.
+Antes de executar os testes, certifique-se de ter instalado:
 
-Cenário 3 : Pesquisa com termo inválido
-Dado que eu estou na página de pesquisa do blog do Agi
-Quando eu digito um termo inválido (por exemplo, caracteres especiais ou números) na caixa de pesquisa e clico na lupa
-Então o sistema informa que o termo pesquisado é inválido.
+Node.js (versão 14 ou superior)
 
-Cenário 4: Pesquisa em branco
-Dado que eu estou na página de pesquisa do blog do Agi
-Quando eu deixo a caixa de pesquisa em branco e clico na lupa
-Então o sistema informa que é necessário digitar uma palavra-chave para realizar a pesquisa.
+npm 
+
+Cypress
+
+Configuração do projeto
+
+Clone este repositório:
+
+git clone https://github.com/seu-usuario/blogdoagi-cypress-tests.git
+cd blogdoagi-cypress-tests
+
+Instale as dependências do Cypress:
+
+npm install
+
+Abra o Cypress:
+
+npx cypress open
+
+Execute os testes na interface interativa ou via terminal:
+
+npx cypress run
+
+Cenários de Teste
+
+Os testes implementados cobrem os seguintes cenários:
+
+Pesquisa válida: Verifica se ao buscar um termo existente, os resultados são exibidos corretamente.
+
+Pesquisa inválida: Valida se ao buscar um termo sem resultados, uma mensagem de "Nenhum resultado" é exibida.
+
+Pesquisa com caracteres especiais: Garante que caracteres especiais não causem falhas na pesquisa.
+
+Pesquisa em branco: Confirma que ao buscar sem inserir um termo, são exibidos resultados padrão, como "Agibank".
+
+                    # Documentação do projeto
+
+ Configuração para CI/CD
+
+Caso deseje rodar os testes em um pipeline de CI/CD, adicione o seguinte comando ao seu arquivo de configuração:
+
+npx cypress run --headless
+
+Considerações finais
+
+Este projeto segue as melhores práticas de automação de testes com Cypress.
